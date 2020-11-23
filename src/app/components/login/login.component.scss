@@ -1,0 +1,27 @@
+form {
+  padding: 30px;
+  background-color: white;
+  max-width: 750px;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  outline: none;
+  margin-top: 20px;
+}
+
+.input-container,
+mat-form-field {
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

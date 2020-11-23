@@ -1,0 +1,12 @@
+<p>
+    <mat-toolbar color="primary">
+        <span>Gestor de alumnos</span>
+        <span class="example-spacer"></span>
+        <button *ngIf="!loggedIn" mat-raised-button (click)="goToLogin()">
+            Iniciar Sesión {{user}}
+        </button>
+        <button *ngIf="loggedIn" mat-raised-button (click)="singOut()">
+            Cerrar Sesión
+        </button>
+    </mat-toolbar>
+</p>

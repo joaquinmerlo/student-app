@@ -1,0 +1,35 @@
+<div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="input-container" *ngIf='isRegister'>
+            <mat-form-field>
+                <mat-label>Ingrese su nombre</mat-label>
+                <input matInput placeholder="Nombre" formControlName="name" required />
+                <mat-error *ngIf="loginForm.controls['name'].invalid">Ingrese un nombre para registrarse</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="input-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese su email</mat-label>
+                <input matInput placeholder="example@example.com" formControlName="email" required>
+                <mat-error *ngIf="loginForm.controls['email'].invalid">Ingrese un email válido</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="input-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese su contreseña</mat-label>
+                <input matInput formControlName="password" type="password" required>
+                <mat-error *ngIf="loginForm.controls['password'].invalid">Ingrese una contraseña de más de 6 caracteres
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit">
+            {{!isRegister ? 'Iniciar Sesion' : 'Registrarme'}}</button>
+
+
+        <a mat-button *ngIf="isRegister" (click)="changeAction(false)">Ya estoy registrado</a>
+        <a mat-button *ngIf="!isRegister" (click)="changeAction(true)">No estoy registrado</a>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+table {
+  max-width: 1200px;
+  min-width: 200px;
+  width: 100%;
+  overflow: auto;
+}
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.btn-container {
+  max-width: 1200px;
+  min-width: 200px;
+  width: 100%;
+}
+
+.align-end {
+  text-align: end;
+}
